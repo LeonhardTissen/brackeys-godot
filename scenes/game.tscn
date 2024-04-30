@@ -454,6 +454,22 @@ _data = {
 "move": SubResource("Animation_suyxx")
 }
 
+[sub_resource type="Animation" id="Animation_yfboq"]
+length = 4.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(625, -108), Vector2(625, 4), Vector2(785, 4)]
+}
+
 [sub_resource type="Animation" id="Animation_m22ar"]
 resource_name = "move_down_right"
 length = 6.0
@@ -466,22 +482,6 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 2.5, 6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(625, -108), Vector2(625, 4), Vector2(785, 4)]
-}
-
-[sub_resource type="Animation" id="Animation_yfboq"]
-length = 4.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(625, -108), Vector2(625, 4), Vector2(785, 4)]
