@@ -1,8 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://xp0qfwf3vq4r"]
+[gd_scene load_steps=19 format=3 uid="uid://xp0qfwf3vq4r"]
 
 [ext_resource type="PackedScene" uid="uid://cpxfgdc57r7cq" path="res://scenes/player.tscn" id="1_8vm45"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_mjvx1"]
-[ext_resource type="Script" path="res://scripts/player.gd" id="2_32d6i"]
 [ext_resource type="FontFile" uid="uid://cqe3qh1lvmp8g" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_u6yrt"]
 [ext_resource type="Texture2D" uid="uid://dh7kifqsni5xs" path="res://assets/sprites/world_tileset.png" id="3_aivii"]
 [ext_resource type="PackedScene" uid="uid://ce1ax8yrdyas3" path="res://scenes/platform.tscn" id="4_8ou8f"]
@@ -529,14 +528,11 @@ layer_2/z_index = -1
 layer_2/tile_data = PackedInt32Array(-65530, 327680, 9, 6, 262144, 10, 65542, 262144, 10, 131078, 262144, 10, -65529, 327680, 9, 7, 262144, 10, 65543, 262144, 10, 131079, 262144, 10, -65528, 327680, 9, 8, 262144, 10, 65544, 262144, 10, 131080, 262144, 10, -65527, 327680, 9, 9, 262144, 10, 65545, 262144, 10, 131081, 262144, 10, -65526, 327680, 9, 10, 262144, 10, 65546, 262144, 10, 131082, 262144, 10, 13, 262144, 10, 65549, 262144, 10, 131085, 262144, 10, 14, 262144, 10, 65550, 262144, 10, 131086, 262144, 10, 15, 262144, 10, 65551, 262144, 10, 131087, 262144, 10, 16, 262144, 10, 65552, 262144, 10, 131088, 262144, 10, 17, 262144, 10, 65553, 262144, 10, 131089, 262144, 10, 18, 262144, 10, 65554, 262144, 10, 131090, 262144, 10, 19, 262144, 10, 65555, 262144, 10, 131091, 262144, 10, 20, 262144, 10, 65556, 262144, 10, 131092, 262144, 10, 21, 262144, 10, 65557, 262144, 10, 131093, 262144, 10, 22, 262144, 10, 65558, 262144, 10, 131094, 262144, 10, -65523, 262144, 9, -65522, 262144, 9, -65521, 262144, 9, -65520, 262144, 9, -65519, 262144, 9, -65518, 262144, 9, -65517, 262144, 9, -65516, 262144, 9, -65515, 262144, 9, -65514, 262144, 9, 131098, 262144, 10, 131099, 262144, 10, 131100, 262144, 10, 131101, 262144, 10, 131102, 262144, 10, 131103, 262144, 10, 65562, 327680, 9, 65563, 327680, 9, 65564, 327680, 9, 65565, 327680, 9, 65566, 327680, 9, 65567, 327680, 9, 65572, 262144, 10, 131108, 262144, 10, 65573, 262144, 10, 131109, 262144, 10, 65574, 262144, 10, 131110, 262144, 10, 65575, 262144, 10, 131111, 262144, 10, 65576, 262144, 10, 131112, 262144, 10, 65577, 262144, 10, 131113, 262144, 10, 65578, 262144, 10, 131114, 262144, 10, 65579, 262144, 10, 131115, 262144, 10, 65580, 262144, 10, 131116, 262144, 10, 65581, 262144, 10, 131117, 262144, 10, 65582, 262144, 10, 131118, 262144, 10, 65583, 262144, 10, 131119, 262144, 10, 65584, 262144, 10, 131120, 262144, 10, 36, 327680, 9, 37, 327680, 9, 38, 327680, 9, 39, 327680, 9, 40, 327680, 9, 41, 327680, 9, 42, 327680, 9, 43, 327680, 9, 44, 327680, 9, 45, 327680, 9, 46, 327680, 9, 47, 327680, 9, 48, 327680, 9, 131125, 262144, 10, 131126, 262144, 10, 131127, 262144, 10, 131128, 262144, 10, 131129, 262144, 10, 131130, 262144, 10, 131131, 262144, 10, 131132, 262144, 10, 131133, 262144, 10, 131134, 262144, 10, 131135, 262144, 10, 131136, 262144, 10, 131137, 262144, 10, 131138, 262144, 10, 131139, 262144, 10, 131140, 262144, 10, 65589, 327680, 9, 65590, 327680, 9, 65591, 327680, 9, 65592, 327680, 9, 65593, 327680, 9, 65594, 327680, 9, 65595, 327680, 9, 65596, 327680, 9, 65597, 327680, 9, 65598, 327680, 9, 65599, 327680, 9, 65600, 327680, 9, 65601, 327680, 9, 65602, 327680, 9, 65603, 327680, 9, 65604, 327680, 9)
 
 [node name="Player" parent="." instance=ExtResource("1_8vm45")]
-z_index = 5
-position = Vector2(-17, -14)
-script = ExtResource("2_32d6i")
+unique_name_in_owner = true
+position = Vector2(-14, -16)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(0, -9)
 zoom = Vector2(4, 4)
-limit_bottom = 57
 position_smoothing_enabled = true
 
 [node name="Coins" type="Node" parent="."]
@@ -672,31 +668,33 @@ shape = SubResource("WorldBoundaryShape2D_u1sty")
 [node name="Slime" parent="." instance=ExtResource("7_nbktt")]
 position = Vector2(-136, 16)
 
-[node name="Label" type="Label" parent="."]
-offset_left = -49.0
-offset_top = -80.0
-offset_right = 37.0
-offset_bottom = -57.0
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = -32.0
+offset_top = -66.0
+offset_right = 54.0
+offset_bottom = -43.0
 theme_override_colors/font_color = Color(0.301961, 0.145098, 0.129412, 1)
 theme_override_fonts/font = ExtResource("8_5tt2k")
 theme_override_font_sizes/font_size = 8
 text = "Space to jump"
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 253.0
-offset_top = -29.0
-offset_right = 339.0
-offset_bottom = -6.0
+[node name="Label2" type="Label" parent="Labels"]
+offset_left = 270.0
+offset_top = -15.0
+offset_right = 356.0
+offset_bottom = 8.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("8_5tt2k")
 theme_override_font_sizes/font_size = 8
 text = "Don't drown"
 
-[node name="Label3" type="Label" parent="."]
-offset_left = 525.0
-offset_top = -212.0
-offset_right = 607.0
-offset_bottom = -189.0
+[node name="Label3" type="Label" parent="Labels"]
+offset_left = 542.0
+offset_top = -198.0
+offset_right = 624.0
+offset_bottom = -175.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_5tt2k")
 theme_override_font_sizes/font_size = 8

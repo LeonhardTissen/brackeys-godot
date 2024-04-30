@@ -1,39 +1,39 @@
 [gd_scene load_steps=10 format=3 uid="uid://das8h240b3mtg"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_euhxm"]
-[ext_resource type="Texture2D" uid="uid://dporjx3bys4fr" path="res://assets/sprites/slime_green.png" id="1_ifwfi"]
+[ext_resource type="Texture2D" uid="uid://djmyyld3yikng" path="res://assets/sprites/slime_purple.png" id="2_6q5rv"]
 [ext_resource type="PackedScene" uid="uid://gsxw0fdcpytg" path="res://scenes/killzone.tscn" id="2_tfuar"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tav6q"]
-atlas = ExtResource("1_ifwfi")
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0v5t"]
+atlas = ExtResource("2_6q5rv")
 region = Rect2(0, 24, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yt6ii"]
-atlas = ExtResource("1_ifwfi")
+[sub_resource type="AtlasTexture" id="AtlasTexture_an7tk"]
+atlas = ExtResource("2_6q5rv")
 region = Rect2(24, 24, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_s32hp"]
-atlas = ExtResource("1_ifwfi")
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5xf2"]
+atlas = ExtResource("2_6q5rv")
 region = Rect2(48, 24, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vwo5r"]
-atlas = ExtResource("1_ifwfi")
+[sub_resource type="AtlasTexture" id="AtlasTexture_c73lb"]
+atlas = ExtResource("2_6q5rv")
 region = Rect2(72, 24, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1kdx1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tav6q")
+"texture": SubResource("AtlasTexture_x0v5t")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yt6ii")
+"texture": SubResource("AtlasTexture_an7tk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_s32hp")
+"texture": SubResource("AtlasTexture_i5xf2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vwo5r")
+"texture": SubResource("AtlasTexture_c73lb")
 }],
 "loop": true,
 "name": &"default",
@@ -43,14 +43,15 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pycxo"]
 size = Vector2(14, 12)
 
-[node name="Slime" type="Node2D"]
+[node name="PurpleSlime" type="Node2D"]
 script = ExtResource("1_euhxm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_1kdx1")
 autoplay = "default"
-frame_progress = 0.462735
+frame = 3
+frame_progress = 0.997979
 
 [node name="Killzone" parent="." instance=ExtResource("2_tfuar")]
 
