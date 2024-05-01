@@ -78,7 +78,7 @@ z_index = -1
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_irygf")
 autoplay = "default"
-frame_progress = 0.638349
+frame_progress = 0.815833
 
 [node name="CheckpointZone" parent="." instance=ExtResource("2_yfovm")]
 script = ExtResource("1_20dub")

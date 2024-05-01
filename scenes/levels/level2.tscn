@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://bb8fov51x7w1b"]
+
+[ext_resource type="PackedScene" uid="uid://ce1ax8yrdyas3" path="res://scenes/platform.tscn" id="3_wg8no"]
+[ext_resource type="PackedScene" uid="uid://gsxw0fdcpytg" path="res://scenes/killzone.tscn" id="4_p3yw8"]
+[ext_resource type="FontFile" uid="uid://vw8mkpf7w8si" path="res://assets/fonts/PixelOperator8.ttf" id="5_7upph"]
+[ext_resource type="PackedScene" uid="uid://cpxfgdc57r7cq" path="res://scenes/player.tscn" id="10_2xlpx"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6ih43"]
+distance = -58.0
+
+[node name="Level2" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("10_2xlpx")]
+position = Vector2(2, -2)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(4, 4)
+limit_top = -477
+limit_bottom = 57
+position_smoothing_enabled = true
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Platforms" type="Node" parent="."]
+
+[node name="Platform" parent="Platforms" instance=ExtResource("3_wg8no")]
+position = Vector2(2, 3)
+
+[node name="Killzones" type="Node" parent="."]
+
+[node name="Killzone" parent="Killzones" instance=ExtResource("4_p3yw8")]
+position = Vector2(17, 14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzones/Killzone"]
+position = Vector2(-3, -2)
+shape = SubResource("WorldBoundaryShape2D_6ih43")
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = -38.0
+offset_top = -59.0
+offset_right = 64.0
+offset_bottom = -36.0
+theme_override_colors/font_color = Color(0.301961, 0.145098, 0.129412, 1)
+theme_override_fonts/font = ExtResource("5_7upph")
+theme_override_font_sizes/font_size = 8
+text = "Now it gets hard"
+metadata/_edit_use_anchors_ = true
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Spikes" type="Node" parent="."]
+
+[node name="Checkpoints" type="Node" parent="."]
