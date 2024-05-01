@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+@onready var animated_sprite = $AnimatedSprite2D
+@onready var jump_sound = $JumpSound
+@onready var hurt_sound = $HurtSound
+
 const SPEED = 100.0
 const JUMP_VELOCITY = -215.0
 
@@ -24,6 +28,7 @@ func kill():
 	is_dead = true
 	animated_sprite.play('death')
 	Engine.time_scale = 0.3
+	hurt_sound.play()
 
 	await get_tree().create_timer(0.4).timeout
 
@@ -32,8 +37,8 @@ func kill():
 	Engine.time_scale = 1.0
 	_go_to_checkpoint()
 
-@onready var animated_sprite = $AnimatedSprite2D
-@onready var jump_sound = $JumpSound
+func set_new_checkpoint():
+	checkpoint = position
 
 func _physics_process(delta):
 	# Add the gravity.

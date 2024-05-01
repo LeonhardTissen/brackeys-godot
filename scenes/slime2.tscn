@@ -47,6 +47,7 @@ size = Vector2(14, 12)
 script = ExtResource("1_odxf2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_1kdx1")
 autoplay = "default"

@@ -8,9 +8,9 @@ func add_point():
 	score += 1
 	print(score)
 	var adjective = ''
-	if score == 30:
+	if score == 60:
 		adjective = 'all'
-	elif score < 10:
+	elif score < 30:
 		adjective = 'only'
 		
 	var s_end = 's' if score != 0 else ''

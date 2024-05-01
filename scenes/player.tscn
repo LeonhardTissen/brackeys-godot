@@ -1,8 +1,9 @@
-[gd_scene load_steps=31 format=3 uid="uid://cpxfgdc57r7cq"]
+[gd_scene load_steps=32 format=3 uid="uid://cpxfgdc57r7cq"]
 
 [ext_resource type="Texture2D" uid="uid://mnapxsr4gekl" path="res://assets/sprites/knight.png" id="1_4mgv1"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_j1wpw"]
 [ext_resource type="AudioStream" uid="uid://cniyfpt0iqnwh" path="res://assets/sounds/jump.wav" id="2_m6mck"]
+[ext_resource type="AudioStream" uid="uid://b3o8wc7ol0t5q" path="res://assets/sounds/hurt.wav" id="4_q8jml"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ks27"]
 atlas = ExtResource("1_4mgv1")
@@ -222,3 +223,7 @@ shape = SubResource("CircleShape2D_q6r0u")
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_m6mck")
 volume_db = -12.18
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_q8jml")
+bus = &"Sounds"
