@@ -5,6 +5,7 @@ var score = 0
 var current_level = 1
 
 func _ready():
+	go_to_next_level()
 	print("Game started", _get_next_level_path())
 
 func _get_next_level_path():

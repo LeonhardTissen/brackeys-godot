@@ -31,6 +31,9 @@ func _go_to_checkpoint():
 	position = checkpoint
 
 func kill():
+	if is_dead:
+		return
+		
 	print("Player died!")
 
 	is_dead = true
