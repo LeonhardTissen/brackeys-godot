@@ -2,3 +2,7 @@
 .godot/
 *.x86_64
 *.exe
+exports/web/index*
+
+# Local Netlify folder
+.netlify
